@@ -11,6 +11,7 @@
 npm-debug.log
 yarn-error.log
 
+
 # IDEs and editors
 .idea/
 .project
@@ -19,6 +20,7 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+.editorconfig
 
 # Visual Studio Code
 .vscode/*
