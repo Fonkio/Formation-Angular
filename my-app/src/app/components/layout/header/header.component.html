@@ -1,0 +1,32 @@
+<p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+      <span class="spacer"></span>
+
+      <nav>
+        <ul>
+            <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="/template-syntax" routerLinkActive="active">Template syntax</a></li>
+            <li *ngIf="this.authService.loggedIn"><a routerLink="/products" routerLinkActive="active">Products</a></li>
+            <li *ngIf="this.authService.loggedIn">
+                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                    <mat-icon matBadge="{{cartService.productLength}}" matBadgeColor="warn">shopping_bag_outline</mat-icon>
+                </button>
+            </li>
+            <li *ngIf="!this.authService.loggedIn">
+                <button (click)="loginClicked()" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                    <mat-icon>login</mat-icon>
+                </button>
+            </li>
+            <li *ngIf="this.authService.loggedIn">
+                <button (click)="logoutClicked()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon>logout</mat-icon>
+                </button>
+            </li>
+        </ul>
+        </nav>    
+    </mat-toolbar>
+  </p>

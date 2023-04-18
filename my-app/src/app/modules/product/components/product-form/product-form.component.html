@@ -1,0 +1,13 @@
+<form class="product-form" [formGroup]="productForm" (ngSubmit)="submit()">
+    <mat-form-field class="product-full-width">
+      <mat-label>Title</mat-label>
+      <input matInput name="title" formControlName="title"/>
+    </mat-form-field>
+  
+    <mat-form-field class="product-full-width">
+      <mat-label>Price</mat-label>
+      <input matInput name="price" formControlName="price" type="number"/>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="productForm.invalid">Ok</button>
+  </form>

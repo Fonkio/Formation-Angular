@@ -1,0 +1,23 @@
+.spacer {
+    flex: 1 auto;
+}
+
+// ul[_ngcontent-pah-c14]
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items:center;
+}
+
+li {
+    margin-left: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+    text-decoration: underline;
+}

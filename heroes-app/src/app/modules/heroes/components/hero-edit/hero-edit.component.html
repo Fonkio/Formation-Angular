@@ -1,0 +1,7 @@
+<form [formGroup]="heroForm" (ngSubmit)="submit()">
+    <mat-form-field appearance="fill">
+        <mat-label>Hero name</mat-label>
+        <input matInput  name="name" formControlName="name">
+    </mat-form-field>
+</form>
+
